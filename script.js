@@ -32,6 +32,13 @@ function convertPressure(pressureInHpa, unit) {
     }
 }
 
+function convertPrecipitation(precipMm, unit) {
+    if (unit === 'in') {
+        return (precipMm * 0.0393701).toFixed(2);  
+    }
+    return precipMm.toFixed(1);  
+}
+
 function updateWeatherData() {
     const url = `https://api.weather.com/v2/pws/observations/current?stationId=${stationId}&format=json&units=m&apiKey=${apiKey}`;
 
@@ -45,6 +52,7 @@ function updateWeatherData() {
                 const windSpeedUnit = document.getElementById('wind-speed-unit-select').value;
                 const windDirUnit = document.getElementById('wind-dir-select').value;
                 const pressureUnit = document.getElementById('pressure-unit-select').value;
+                const precipUnit = document.getElementById('precip-unit-select').value;
 
                 const tempInSelectedUnit = convertTemperature(observation.metric.temp, tempUnit);
                 document.getElementById('teplota').textContent = tempInSelectedUnit;
@@ -58,30 +66,11 @@ function updateWeatherData() {
                     const windDirection = windDirectionFromDegrees(observation.winddir);
                     document.getElementById('smer').textContent = windDirection || '--';
                 } else {
-                    document.getElementById('smer').textContent = observation.winddir || '--';  // Stupně
+                    document.getElementById('smer').textContent = observation.winddir || '--';  
                 }
 
-                document.getElementById('vlhkost').textContent = observation.humidity || '--';
-                document.getElementById('sracky').textContent = observation.metric.precipTotal || '--';
+                const precipInSelectedUnit = convertPrecipitation(observation.metric.precipTotal, precipUnit);
+                document.getElementById('sracky').textContent = precipInSelectedUnit;
+                document.getElementById('precip-unit').textContent = precipUnit;
 
-                const pressureInSelectedUnit = convertPressure(observation.metric.pressure, pressureUnit);
-                document.getElementById('tlak').textContent = pressureInSelectedUnit;
-                document.getElementById('pressure-unit').textContent = pressureUnit;
-
-            } else {
-                console.error('Chyba: Data nejsou dostupná.');
-            }
-        })
-        .catch(error => {
-            console.error('Chyba při načítání dat z API:', error);
-        });
-}
-
-setInterval(updateWeatherData, 30000);
-
-document.addEventListener('DOMContentLoaded', updateWeatherData);
-
-document.getElementById('temp-unit-select').addEventListener('change', updateWeatherData);
-document.getElementById('wind-speed-unit-select').addEventListener('change', updateWeatherData);
-document.getElementById('wind-dir-select').addEventListener('change', updateWeatherData);
-document.getElementById('pressure-unit-select').addEventListener('change', updateWeatherData);
+                document.getElementById
