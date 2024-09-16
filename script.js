@@ -1,4 +1,3 @@
-
 const apiKey = 'e351e5d13283470991e5d13283f7098f';  
 const stationId = 'IPODLE19';  
 
