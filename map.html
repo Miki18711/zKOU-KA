@@ -15,7 +15,6 @@
             justify-content: center;
             align-items: flex-start;
             height: 100vh;
-            flex-direction: row;
         }
         .container {
             text-align: center;
@@ -26,11 +25,17 @@
             max-width: 800px;
             margin: 20px;
             box-sizing: border-box;
-            flex: 1;
+            flex: 3;
         }
         h1 {
             color: #00796b;
             margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
         }
         a {
             text-decoration: none;
@@ -50,13 +55,43 @@
             gap: 20px;
             flex-wrap: wrap;
         }
+        .sitemap {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            max-width: 200px;
+        }
+        .sitemap h3 {
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+        .sitemap a {
+            color: #00796b;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .sitemap a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
+            p {
+                font-size: 16px;
+            }
             a {
                 padding: 10px 15px;
             }
             .button-container {
                 flex-direction: column;
                 gap: 10px;
+            }
+            .sitemap {
+                position: static;
+                max-width: 100%;
+                margin-top: 20px;
             }
         }
     </style>
@@ -68,10 +103,17 @@
         
         <div class="button-container">
             <a href="index.html">Zpět na Domovskou stránku</a>
-            <a href="weather.html">Přejít na aktuální počasí</a>
-            <a href="about.html">O meteostanici</a>
-            <a href="records.html">Rekordy meteostanice</a>
         </div>
+    </div>
+
+    <!-- Mapa webu (sitemap) -->
+    <div class="sitemap">
+        <h3>Mapa stránek</h3>
+        <a href="index.html">Domů</a>
+        <a href="about.html">O meteostanici</a>
+        <a href="records.html">Rekordy</a>
+        <a href="map.html">Mapa</a>
+        <a href="weather.html">Počasí</a>
     </div>
 </body>
 </html>
