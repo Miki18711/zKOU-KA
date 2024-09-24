@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Meteostanici Staré Podlesí</title>
+    <title>O Meteostanici</title>
     <style>
         body {
             background: linear-gradient(to right, #00bcd4, #ffffff);
@@ -19,94 +19,80 @@
         .container {
             text-align: center;
             background-color: #ffffff;
-            padding: 30px;
+            padding: 50px;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px;
             box-sizing: border-box;
-            flex: 3;
         }
         h1 {
             color: #00796b;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
         }
         p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 40px;
             text-align: center;
         }
         a {
             text-decoration: none;
             color: #ffffff;
             background-color: #00796b;
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 15px 30px;
+            border-radius: 10px;
             margin-top: 20px;
             display: inline-block;
         }
-        a:hover {
-            background-color: #004d40;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+        /* Mapa webu */
         .sitemap {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            right: 10px;
-            top: 10px;
+            position: relative;
+            top: 30px;
             max-width: 200px;
+            margin-left: 20px;
         }
         .sitemap h3 {
             margin-bottom: 10px;
             color: #00796b;
         }
         .sitemap a {
-            color: #00796b;
+            color: #ffffff;
+            background-color: #00796b;
+            padding: 10px;
+            border-radius: 8px;
             display: block;
             margin-bottom: 10px;
+            text-align: center;
         }
         .sitemap a:hover {
-            text-decoration: underline;
+            background-color: #00796b;
+            color: #ffffff;
         }
         @media (max-width: 600px) {
             p {
-                font-size: 16px;
+                font-size: 20px;
             }
             a {
-                padding: 10px 15px;
-            }
-            .button-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .sitemap {
-                position: static;
-                max-width: 100%;
-                margin-top: 20px;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>O Meteostanici Staré Podlesí</h1>
+        <h1>O Meteostanici</h1>
         <p>
-            Meteorologická stanice Staré Podlesí se nachází v katastru města Příbram na pozemku domu č.p 18 ve Starém Podlesí. Stanici, která se na soukromém pozemku začala budovat v prosinci roku 2023 a dokončena byla v srpnu 2024. 
-            Byla zahájena jako stanice dočasně účelová a provoz byl zahájen 27.prosince 2023. Automatická met. stanice zaznamenává nepřetržitě hodnoty teploty vzduchu, vlhkosti vzduchu, tlaku vzduchu, půdní teploty v hloubkách 10 cm pod povrchem, srážky, směr a rychlost větru.
+            Meteorologická stanice Staré Podlesí se nachází v katastru města Příbram na pozemku domu č.p 18 ve Starém Podlesí.
+            Stanice byla zahájena v prosinci roku 2023 a dokončena v srpnu 2024. Automatická meteostanice zaznamenává nepřetržitě hodnoty teploty vzduchu, vlhkosti vzduchu, tlaku vzduchu, půdní teploty a další parametry.
         </p>
-        
-        <div class="button-container">
-            <a href="index.html">Zpět na Domovskou stránku</a>
-        </div>
+
+        <a href="index.html">Zpět na Domovskou stránku</a>
     </div>
 
     <!-- Mapa webu (sitemap) -->
