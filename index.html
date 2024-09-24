@@ -13,10 +13,12 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            align-items: flex-start;
+            flex-direction: row;
             height: 100vh;
         }
+
+        /* Main container for content */
         .container {
             text-align: center;
             background-color: #ffffff;
@@ -25,18 +27,32 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             max-width: 800px;
             margin: 20px;
-            box-sizing: border-box;
+            flex: 3;
         }
+
+        /* Sidebar styling */
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            max-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
         h1 {
             color: #00796b;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
             text-align: justify;
         }
+
         a {
             text-decoration: none;
             color: #ffffff;
@@ -46,54 +62,76 @@
             transition: background-color 0.3s ease;
             margin-top: 20px;
         }
+
         a:hover {
             background-color: #004d40;
         }
+
+        /* Styling for button container */
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
         }
-        /* Mapa stránek */
+
+        /* Mapa stránek v sidebaru */
         .sitemap {
-            margin-top: 40px;
             text-align: left;
         }
+
         .sitemap h2 {
             margin-bottom: 10px;
             color: #00796b;
         }
+
         .sitemap ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         .sitemap ul li {
-            margin: 5px 0;
+            margin: 15px 0;
         }
+
         .sitemap ul li a {
             color: #00796b;
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         .sitemap ul li a:hover {
             color: #004d40;
         }
+
         @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+                align-items: center;
+            }
+
             p {
                 font-size: 16px;
             }
+
             a {
                 padding: 10px 15px;
             }
+
             .button-container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 20px;
+            }
+
+            .sidebar {
+                max-width: 100%;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Main content container -->
     <div class="container">
         <h1>Meteostanice Staré Podlesí</h1>
         <p>Meteorologická stanice Staré Podlesí se nachází ve stejnojmenné vesnici v Podbrdí, v katastru města Příbram, Středočeský kraj.</p>
@@ -111,8 +149,10 @@
             <a href="map.html">Zobrazit mapu</a>
             <a href="weather.html">Přejít na aktuální počasí</a>
         </div>
+    </div>
 
-        <!-- Mapa stránek -->
+    <!-- Sidebar with Sitemap -->
+    <div class="sidebar">
         <div class="sitemap">
             <h2>Mapa stránek</h2>
             <ul>
