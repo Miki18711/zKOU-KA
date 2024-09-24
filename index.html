@@ -25,7 +25,6 @@
             max-width: 800px;
             margin: 20px;
             box-sizing: border-box;
-            flex: 3;
         }
         h1 {
             color: #00796b;
@@ -35,7 +34,7 @@
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
-            text-align: center;
+            text-align: justify;
         }
         a {
             text-decoration: none;
@@ -45,25 +44,18 @@
             border-radius: 8px;
             margin-top: 20px;
             display: inline-block;
+            transition: background-color 0.3s ease;
         }
         a:hover {
             background-color: #004d40;
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        /* Map section */
         .sitemap {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: absolute;
-            right: 10px;
-            top: 10px;
+            position: relative;
+            top: 30px;
             max-width: 200px;
         }
         .sitemap h3 {
@@ -85,15 +77,6 @@
             a {
                 padding: 10px 15px;
             }
-            .button-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .sitemap {
-                position: static;
-                max-width: 100%;
-                margin-top: 20px;
-            }
         }
     </style>
 </head>
@@ -103,22 +86,13 @@
         <p>Meteorologická stanice Staré Podlesí se nachází ve stejnojmenné vesnici v Podbrdí, v katastru města Příbram, Středočeský kraj.</p>
         <p>Měření: Meteostanice začala nahrávat svá data 27. prosince roku 2023. Nachází se zde i čidla na měření vlhkosti a teploty půdy, teploty a vlhkosti vzduchu a sněhoměr (ve výstavbě).</p>
         <p>Rekordy meteostanice:<br>
-        Maximální teplota vzduchu: 34,6 °C<br>
-        Minimální teplota vzduchu: -8,3 °C<br>
-        Maximální výška sněhu: 25 cm<br>
-        Maximální náraz větru: 16,5 km/h</p>
-        
-        <h2>Mapa Lokality</h2>
-        <p>Na této mapě můžete najít umístění meteostanice Staré Podlesí:</p>
-        
-        <div class="button-container">
-            <a href="map.html">Zobrazit mapu</a>
-            <a href="weather.html">Přejít na aktuální počasí</a>
-            <a href="about.html">O meteostanici</a>
-            <a href="records.html">Rekordy meteostanice</a>
-        </div>
+            Maximální teplota vzduchu: 34,6 °C<br>
+            Minimální teplota vzduchu: -8,3 °C<br>
+            Maximální výška sněhu: 25 cm<br>
+            Maximální náraz větru: 16,5 km/h
+        </p>
     </div>
-    
+
     <!-- Mapa webu (sitemap) -->
     <div class="sitemap">
         <h3>Mapa stránek</h3>
