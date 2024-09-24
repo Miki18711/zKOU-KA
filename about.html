@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Meteostanici Staré Podlesí</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00bcd4, #ffffff);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            flex-direction: row;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #004d40;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+            p {
+                font-size: 16px;
+            }
+            a {
+                padding: 10px 15px;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>O Meteostanici Staré Podlesí</h1>
+        <p>
+            Meteorologická stanice Staré Podlesí se nachází v katastru města Příbram na pozemku domu č.p 18 ve Starém Podlesí. Stanici, která se na soukromém pozemku začala budovat v prosinci roku 2023 a dokončena byla v srpnu 2024. 
+            Byla zahájena jako stanice dočasně účelová a provoz byl zahájen 27.prosince 2023. Automatická met. stanice zaznamenává nepřetržitě hodnoty teploty vzduchu, vlhkosti vzduchu, tlaku vzduchu, půdní teploty v hloubkách 10 cm pod povrchem, srážky, směr a rychlost větru. 
+            V zimě se provádí měření výšky sněhové pokrývky a vodní hodnoty sněhové pokrývky. Přístup k meteorologické stanici je soukromý.
+        </p>
+        
+        <div class="button-container">
+            <a href="index.html">Zpět na Domovskou stránku</a>
+            <a href="weather.html">Přejít na aktuální počasí</a>
+            <a href="map.html">Zobrazit mapu</a>
+            <a href="records.html">Rekordy meteostanice</a>
+        </div>
+    </div>
+</body>
+</html>
