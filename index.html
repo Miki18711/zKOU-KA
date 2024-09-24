@@ -3,76 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meteostanice</title>
+    <title>Meteostanice Staré Podlesí</title>
     <style>
         body {
+            background: linear-gradient(to right, #00bcd4, #ffffff);
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
             color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
         }
-
-        #weather-data {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: auto;
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px;
+            box-sizing: border-box;
         }
-
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
         p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #004d40;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        /* Mapa stránek */
+        .sitemap {
+            margin-top: 40px;
+            text-align: left;
+        }
+        .sitemap h2 {
+            margin-bottom: 10px;
+            color: #00796b;
+        }
+        .sitemap ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .sitemap ul li {
             margin: 5px 0;
         }
-
-        select {
-            margin-top: 10px;
-            padding: 5px;
-            font-size: 14px;
+        .sitemap ul li a {
+            color: #00796b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .sitemap ul li a:hover {
+            color: #004d40;
+        }
+        @media (max-width: 600px) {
+            p {
+                font-size: 16px;
+            }
+            a {
+                padding: 10px 15px;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Aktuální data z meteostanice</h1>
-    <div id="weather-data">
-        <p>Teplota: <span id="teplota">--</span> <span id="temp-unit">°C</span></p>
-        <p>Vlhkost vzduchu: <span id="vlhkost">--</span> %</p>
-        <p>Atmosférický tlak: <span id="tlak">--</span> <span id="pressure-unit">hPa</span></p>
-        <p>Srážky za den: <span id="sracky">--</span> mm</p>
-        <p>Směr větru: <span id="smer">--</span></p>
-        <p>Rychlost větru: <span id="vitr">--</span> <span id="wind-speed-unit">km/h</span></p>
+    <div class="container">
+        <h1>Meteostanice Staré Podlesí</h1>
+        <p>Meteorologická stanice Staré Podlesí se nachází ve stejnojmenné vesnici v Podbrdí, v katastru města Příbram, Středočeský kraj.</p>
+        <p>Měření: Meteostanice začala nahrávat svá data 27. prosince roku 2023. Nachází se zde i čidla na měření vlhkosti a teploty půdy, teploty a vlhkosti vzduchu a sněhoměr (ve výstavbě).</p>
+        <p>Rekordy meteostanice:<br>
+        Maximální teplota vzduchu: 34,6 °C<br>
+        Minimální teplota vzduchu: -8,3 °C<br>
+        Maximální výška sněhu: 25 cm<br>
+        Maximální náraz větru: 16,5 km/h</p>
+        
+        <h2>Mapa Lokality</h2>
+        <p>Na této mapě můžete najít umístění meteostanice Staré Podlesí:</p>
+        
+        <div class="button-container">
+            <a href="map.html">Zobrazit mapu</a>
+            <a href="weather.html">Přejít na aktuální počasí</a>
+        </div>
 
-        <!-- Přepínání jednotek -->
-        <label for="temp-unit-select">Zvolte jednotku teploty:</label>
-        <select id="temp-unit-select">
-            <option value="C">°C</option>
-            <option value="F">°F</option>
-        </select>
-
-        <label for="wind-speed-unit-select">Zvolte jednotku rychlosti větru:</label>
-        <select id="wind-speed-unit-select">
-            <option value="km/h">km/h</option>
-            <option value="mph">mph</option>
-        </select>
-
-        <label for="wind-dir-select">Zvolte jednotku směru větru:</label>
-        <select id="wind-dir-select">
-            <option value="degrees">Stupně</option>
-            <option value="directions">Světové strany</option>
-        </select>
-
-        <label for="pressure-unit-select">Zvolte jednotku tlaku:</label>
-        <select id="pressure-unit-select">
-            <option value="hPa">hPa</option>
-            <option value="mmHg">mmHg</option>
-            <option value="inHg">inHg</option>
-        </select>
+        <!-- Mapa stránek -->
+        <div class="sitemap">
+            <h2>Mapa stránek</h2>
+            <ul>
+                <li><a href="index.html">Domovská stránka</a></li>
+                <li><a href="weather.html">Aktuální počasí</a></li>
+                <li><a href="map.html">Mapa meteostanice</a></li>
+                <li><a href="records.html">Rekordy meteostanice</a></li>
+                <li><a href="about.html">O stanici</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
