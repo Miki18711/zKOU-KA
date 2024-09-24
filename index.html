@@ -39,12 +39,13 @@
         }
         a {
             text-decoration: none;
-            color: #ffffff; /* Text na tlačítkách bílý */
+            color: #ffffff; /* Text je bílý */
             background-color: #00796b;
             padding: 10px 20px;
             border-radius: 8px;
             transition: background-color 0.3s ease;
             margin-top: 20px;
+            display: inline-block; /* Zajišťuje, že tlačítka se chovají jako blokové prvky */
         }
         a:hover {
             background-color: #004d40;
@@ -69,6 +70,44 @@
                 gap: 10px; /* Zmenší mezery mezi tlačítky na mobilu */
             }
         }
+
+        /* Sidebar s mapou stránek */
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            max-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Styl pro položky v mapě stránek */
+        .sitemap h2 {
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .sitemap ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sitemap ul li {
+            margin: 15px 0;
+        }
+
+        .sitemap ul li a {
+            color: #ffffff; /* Text v mapě stránek je bílý */
+            background-color: #00796b; /* Barva pozadí */
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block; /* Zajišťuje, že odkazy se chovají jako blokové prvky */
+            transition: background-color 0.3s ease; /* Efekt přechodu */
+        }
+
+        .sitemap ul li a:hover {
+            background-color: #004d40; /* Barva pozadí při hoveru */
+        }
     </style>
 </head>
 <body>
@@ -91,17 +130,19 @@
         </div>
     </div>
 
-    <!-- Sidebar with Sitemap -->
+    <!-- Sidebar s mapou stránek -->
     <div class="sidebar">
-        <h2>Mapa stránek</h2>
-        <ul style="list-style-type: none; padding-left: 0;">
-            <li><a href="index.html">Domovská stránka</a></li>
-            <li><a href="weather.html">Aktuální počasí</a></li>
-            <li><a href="map.html">Mapa meteostanice</a></li>
-            <li><a href="records.html">Rekordy meteostanice</a></li>
-            <li><a href="about.html">O stanici</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
+        <div class="sitemap">
+            <h2>Mapa stránek</h2>
+            <ul>
+                <li><a href="index.html">Domovská stránka</a></li>
+                <li><a href="weather.html">Aktuální počasí</a></li>
+                <li><a href="map.html">Mapa meteostanice</a></li>
+                <li><a href="records.html">Rekordy meteostanice</a></li>
+                <li><a href="about.html">O stanici</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
