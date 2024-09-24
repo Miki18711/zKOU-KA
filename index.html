@@ -11,11 +11,11 @@
             color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
+            display: flex; /* Flexbox pro celou stránku */
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            align-items: flex-start; /* Zarovnat obsah nahoře */
             height: 100vh;
+            flex-direction: row; /* Umístění vedle sebe */
         }
         .container {
             text-align: center;
@@ -26,6 +26,7 @@
             max-width: 800px;
             margin: 20px;
             box-sizing: border-box;
+            flex: 1; /* Rozšiřuje tuto část do dostupného prostoru */
         }
         h1 {
             color: #00796b;
@@ -79,6 +80,7 @@
             border-radius: 15px;
             max-width: 200px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0; /* Zabrání zmenšení sidebaru */
         }
         
         /* Styl pro položky v mapě stránek */
@@ -146,4 +148,3 @@
     </div>
 </body>
 </html>
-
