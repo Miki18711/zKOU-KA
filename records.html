@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekordy Meteostanice Staré Podlesí</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00bcd4, #ffffff);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            flex-direction: row;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #004d40;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+            p {
+                font-size: 16px;
+            }
+            a {
+                padding: 10px 15px;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rekordy Meteostanice</h1>
+        <p>
+            Maximální teplota vzduchu: <strong>34,6 °C</strong> (16. srpna 2024)<br>
+            Minimální teplota vzduchu: <strong>-8,3 °C</strong> (2. února 2024)<br>
+            Maximální výška sněhu: <strong>25 cm</strong> (26. února 2024)<br>
+            Maximální náraz větru: <strong>16,5 km/h</strong> (15. června 2024)
+        </p>
+        
+        <div class="button-container">
+            <a href="index.html">Zpět na Domovskou stránku</a>
+            <a href="weather.html">Přejít na aktuální počasí</a>
+            <a href="map.html">Zobrazit mapu</a>
+            <a href="about.html">O meteostanici</a>
+        </div>
+    </div>
+</body>
+</html>
