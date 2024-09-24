@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Meteostanice Staré Podlesí</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00bcd4, #ffffff);
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            flex-direction: row;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 20px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        h1 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #004d40;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 600px) {
+            a {
+                padding: 10px 15px;
+            }
+            .button-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mapa Meteostanice Staré Podlesí</h1>
+        <p>Na této stránce by měla být umístěna mapa s lokalizací meteostanice.</p>
+        
+        <div class="button-container">
+            <a href="index.html">Zpět na Domovskou stránku</a>
+            <a href="weather.html">Přejít na aktuální počasí</a>
+            <a href="about.html">O meteostanici</a>
+            <a href="records.html">Rekordy meteostanice</a>
+        </div>
+    </div>
+</body>
+</html>
