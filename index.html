@@ -13,12 +13,10 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            flex-direction: row;
+            align-items: center;
+            flex-direction: column;
             height: 100vh;
         }
-
-        /* Main container for content */
         .container {
             text-align: center;
             background-color: #ffffff;
@@ -27,114 +25,53 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             max-width: 800px;
             margin: 20px;
-            flex: 3;
+            box-sizing: border-box;
         }
-
-        /* Sidebar styling */
-        .sidebar {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-            max-width: 200px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            flex: 1;
-        }
-
         h1 {
             color: #00796b;
             margin-bottom: 20px;
         }
-
         p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
-            text-align: justify;
+            text-align: justify; /* Zarovná text do bloku */
         }
-
-        /* Default button styling */
         a {
             text-decoration: none;
-            color: #ffffff;  /* Text is always white */
+            color: #ffffff; /* Text na tlačítkách bílý */
             background-color: #00796b;
             padding: 10px 20px;
             border-radius: 8px;
+            transition: background-color 0.3s ease;
             margin-top: 20px;
-            display: inline-block;
         }
-
-        /* No color change on hover */
         a:hover {
-            background-color: #00796b;
-            color: #ffffff;  /* Ensure text stays white on hover */
+            background-color: #004d40;
         }
-
-        /* Styling for button container */
+        /* Flexbox styl pro tlačítka */
         .button-container {
             display: flex;
             justify-content: center;
-            gap: 50px;  /* Increased gap between buttons */
-            margin-top: 40px;  /* Increased margin between buttons and other content */
+            gap: 20px;
+            flex-wrap: wrap; /* Zajišťuje, že tlačítka se zalomí na menších obrazovkách */
         }
-
-        /* Mapa stránek v sidebaru */
-        .sitemap {
-            text-align: left;
-        }
-
-        .sitemap h2 {
-            margin-bottom: 10px;
-            color: #00796b;
-        }
-
-        .sitemap ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .sitemap ul li {
-            margin: 15px 0;
-        }
-
-        .sitemap ul li a {
-            color: #00796b;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .sitemap ul li a:hover {
-            color: #004d40;
-        }
-
+        /* Změny pro malé obrazovky (telefony) */
         @media (max-width: 600px) {
-            body {
-                flex-direction: column;
-                align-items: center;
-            }
-
             p {
-                font-size: 16px;
+                font-size: 16px; /* Mírně zmenší text na menších obrazovkách */
             }
-
             a {
-                padding: 10px 15px;
+                padding: 10px 15px; /* Zmenší tlačítka */
             }
-
             .button-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .sidebar {
-                max-width: 100%;
-                margin-top: 20px;
+                flex-direction: column; /* Na malých obrazovkách se tlačítka umístí vertikálně */
+                gap: 10px; /* Zmenší mezery mezi tlačítky na mobilu */
             }
         }
     </style>
 </head>
 <body>
-    <!-- Main content container -->
     <div class="container">
         <h1>Meteostanice Staré Podlesí</h1>
         <p>Meteorologická stanice Staré Podlesí se nachází ve stejnojmenné vesnici v Podbrdí, v katastru města Příbram, Středočeský kraj.</p>
@@ -156,17 +93,16 @@
 
     <!-- Sidebar with Sitemap -->
     <div class="sidebar">
-        <div class="sitemap">
-            <h2>Mapa stránek</h2>
-            <ul>
-                <li><a href="index.html">Domovská stránka</a></li>
-                <li><a href="weather.html">Aktuální počasí</a></li>
-                <li><a href="map.html">Mapa meteostanice</a></li>
-                <li><a href="records.html">Rekordy meteostanice</a></li>
-                <li><a href="about.html">O stanici</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-            </ul>
-        </div>
+        <h2>Mapa stránek</h2>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><a href="index.html">Domovská stránka</a></li>
+            <li><a href="weather.html">Aktuální počasí</a></li>
+            <li><a href="map.html">Mapa meteostanice</a></li>
+            <li><a href="records.html">Rekordy meteostanice</a></li>
+            <li><a href="about.html">O stanici</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
     </div>
 </body>
 </html>
+
